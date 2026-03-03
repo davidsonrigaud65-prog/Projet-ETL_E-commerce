@@ -1,18 +1,11 @@
-"""
-Script ETL complet pour l'analyse de données e-commerce.
-Phases :
-    1. Extraction des données (CSV)
-    2. Exploration (statistiques, info, gestion des NaN)
-    3. Transformation (nettoyage, enrichissement, métriques)
-    4. Chargement (export CSV/SQLite)
-Commenté pour usage pédagogique.
-"""
+# Importation des bibliotheques necessaires
 import pandas as pd  # Manipulation de données
 import os           # Gestion des fichiers et dossiers
 import sys          # Accès aux fonctions système
 import argparse     # Gestion des arguments en ligne de commande
 import sqlite3      # Export SQLite
 from typing import Dict, Tuple
+
 
 
 def safe_read_csv(path: str) -> pd.DataFrame:
@@ -59,7 +52,7 @@ def explorer_donnees(dfs: Dict[str, pd.DataFrame]) -> str:
         null_cols = null_cols[null_cols > 0]
         if len(null_cols) > 0:
             report.append(f"  Colonnes avec NaN : {dict(null_cols)}")
-            # Pour chaque colonne avec NaN, préciser la stratégie d'imputation selon le type
+            # Pour chaque colonne avec NaN,on précise la stratégie d'imputation selon le type
             for col in null_cols.index:
                 n_nan = null_cols[col]
                 col_type = df[col].dtype
@@ -78,7 +71,7 @@ def explorer_donnees(dfs: Dict[str, pd.DataFrame]) -> str:
                     if outlier_pct > 5:
                         strat = "Remplissage par la médiane (robuste aux outliers)"
                     else:
-                        strat = "Remplissage par la moyenne (mean)"
+                        strat = "Remplissage par la moyenne "
                 elif pd.api.types.is_categorical_dtype(col_type) or pd.api.types.is_object_dtype(col_type):
                     strat = "Remplissage par la valeur la plus fréquente (mode)"
                 else:
