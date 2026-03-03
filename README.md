@@ -1,4 +1,4 @@
-# 🛒 Projet ETL E-commerce Professionnel
+#  Projet ETL E-commerce Professionnel
 ### Pipeline de données complet avec Python & Pandas
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python&logoColor=white)
@@ -8,23 +8,23 @@
 
 ---
 
-## 📌 Description
+##  Description
 
 Ce projet est un **pipeline ETL (Extract, Transform, Load)** complet réalisé en Python avec la bibliothèque `pandas`.  
 Il démontre les bonnes pratiques de traitement de données à partir de fichiers CSV issus d'un schéma e-commerce inspiré du célèbre **dataset Olist (Brésil)**.
 
 ---
 
-## 🎯 Objectifs pédagogiques
+##  Objectifs pédagogiques
 
 | Étape | Description |
 |-------|-------------|
-| 📥 **Extract** | Lire et explorer des données réelles (CSV) |
-| 🔧 **Transform** | Nettoyer, enrichir et transformer les données |
-| 🧹 **Qualité** | Gérer les valeurs manquantes et les outliers |
-| 🔗 **Jointures** | Réaliser des jointures robustes entre tables |
-| 📊 **Métriques** | Calculer revenus, délais, top catégories... |
-| 📤 **Load** | Exporter en CSV et dans une base SQLite |
+|  **Extract** | Lire et explorer des données réelles (CSV) |
+|  **Transform** | Nettoyer, enrichir et transformer les données |
+|  **Qualité** | Gérer les valeurs manquantes et les outliers |
+|  **Jointures** | Réaliser des jointures robustes entre tables |
+|  **Métriques** | Calculer revenus, délais, top catégories... |
+|  **Load** | Exporter en CSV et dans une base SQLite |
 
 ---
 
@@ -50,7 +50,7 @@ Projet-ETL_E-commerce/
 
 ---
 
-## 🚀 Lancer le projet
+##  Lancer le projet
 
 ### 1. Cloner le repository
 ```bash
@@ -75,12 +75,12 @@ python tp_etl.py --data-dir tp_etl/tp_etl/sqlite_exports --out outputs --sqlite 
 
 ---
 
-## ✨ Points forts
+##  Points forts
 
-- 🎯 **Imputation intelligente** — médiane si outliers, moyenne sinon, mode pour les catégorielles
-- 🔍 **Détection automatique des outliers** via méthode IQR
-- 📋 **Logging détaillé** pour la traçabilité complète du pipeline
-- 💬 **Code abondamment commenté** pour la lisibilité et la pédagogie
+-  **Imputation intelligente** — médiane si outliers, moyenne sinon, mode pour les catégorielles
+-  **Détection automatique des outliers** via méthode IQR
+-  **Logging détaillé** pour la traçabilité complète du pipeline
+-  **Code abondamment commenté** pour la lisibilité et la pédagogie
 
 ---
 
@@ -92,4 +92,4 @@ python tp_etl.py --data-dir tp_etl/tp_etl/sqlite_exports --out outputs --sqlite 
 
 ---
 
-> 💡 *Projet réalisé dans le cadre d'une formation Data Science — Phase 3 : Analyse de données, OLAP & Power BI*
+>  *Projet réalisé dans le cadre d'une formation Data Science — Phase 3 : Analyse de données, OLAP & Power BI*
